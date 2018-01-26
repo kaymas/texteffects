@@ -1,0 +1,56 @@
+$lines : 3
+$left-offset: 30px
+$clip-height: 40px
+$line-height: $clip-height - 5px
+
+.slide5
+  background-color: #5138BE
+  color: white
+  display: flex
+  perspective: 1000px
+
+.words
+  margin: 0 auto
+  padding: 80px 0
+  font-size: 5.4rem
+  font-weight: 900
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif
+  letter-spacing: -1px
+  text-transform: uppercase
+  -webkit-font-smoothing: antialiased
+  font-kerning: normal
+  -webkit-text-size-adjust: 100%
+  transform: translate3d(0,0,0)
+  outline: none
+  perspective: 1000px
+
+
+  &:hover
+    p
+      transform: translate3d(0, -($clip-height), 0)
+
+.words-line
+  height: $clip-height
+  overflow: hidden
+  position: relative
+  top: -40px
+
+  &:nth-child(odd)
+    transform: skew(60deg, -30deg) scaleY(0.66)
+
+  &:nth-child(even)
+    transform: skew(0deg, -30deg) scaleY(1.333)
+
+  @for $i from 1 through $lines + 1
+    &:nth-child(#{$i})
+      left: $left-offset * ($i - 3)
+
+  p
+    height: $clip-height
+    line-height: $line-height
+    padding: 0 10px
+    margin: 0
+    vertical-align: top
+    white-space: nowrap
+    transform: translate3d(0,0,0)
+    transition: all 0.4s ease-in-out

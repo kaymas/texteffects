@@ -1,0 +1,23 @@
+.slide3
+  h1
+    position: relative
+    display: inline-block
+    white-space: nowrap
+    z-index: 10
+    letter-spacing: 5px
+    font-size: 8rem
+    text-transform: uppercase
+
+    &::before
+      content: attr(data-heading)
+      position: absolute
+      left: -4px
+      color: rgba(255,0,0,0.8)
+      z-index: -1
+
+    &::after
+      content: attr(data-heading)
+      position: absolute
+      left: 4px
+      color: rgba(0,0,255,0.8)
+      z-index: -1
