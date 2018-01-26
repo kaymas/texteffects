@@ -1,0 +1,44 @@
+.slide8
+  font: monospace
+  position: relative
+  height: 200px
+
+  h1
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)skew(10deg) rotate(-10deg)
+    font-size: 15rem
+    font-weight: 900
+    color: rgba(darken(pink, 10), 0.5)
+    text-transform: uppercase
+    text-shadow: 1px 4px 6px #eee, 0 0 0 #66303a, 1px 4px 6px #eee
+    white-space: nowrap
+    word-spacing: -4rem
+
+    &::before
+      content: attr(data-heading)
+      position: absolute
+      left: 0
+      top: -5%
+      overflow: hidden
+      width: 100%
+      height: 50%
+      color: darken(white, 1)
+      transform: translate(15px, 0) skew(-13deg) scale(1,1.2)
+      text-shadow: 2px -1px 6px rgba(0,0,0,0.2)
+      z-index: 2
+
+    &::after
+      content: attr(data-heading)
+      position: absolute
+      left: 0
+      top: -1%
+      width: 100%
+      height: 100%
+      overflow: hidden
+      color: darken(white, 10)
+      transform: translate(3px,0) skew(13deg) scale(1,0.8)
+      text-shadow: 2px -1px 6px rgba(0,0,0,0.3)
+      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%)
+      z-index: 1

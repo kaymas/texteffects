@@ -1,0 +1,15 @@
+.slide7
+  
+  h1
+    color: #333
+    position: relative
+    font-size: 10rem
+    display: inline-block
+
+    &::before
+      content: attr(data-heading)
+      position: absolute
+      left: 0
+      top: 0
+      color: skyblue
+      clip-path: polygon(0% 30%, 60% 30%, 60% 0%, 100% 50%, 60% 100%, 60% 70%, 0% 70%)

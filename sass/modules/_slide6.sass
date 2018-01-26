@@ -1,0 +1,27 @@
+.slide6
+  background: linear-gradient(to right, #f1ebc9 0%, #f1ebc9 30%, #f1a43c 30%, #f1a43c 70%, #bdd9b2 70%, #bdd9b2 100%)
+  padding: 30px 0
+
+  h1
+    color: #bdd9b2
+    position: relative
+    // background: linear-gradient(to right, #f1ebc9 0%, #f1ebc9 30%, #f1a43c 30%, #f1a43c 70%, #bdd9b2 70%, #bdd9b2 100%)
+    font-size: 4.7rem
+
+    &::after
+      content: attr(data-heading)
+      position: absolute
+      overflow: hidden
+      left: 0
+      top: 0
+      color: #f1a43c
+      clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
+
+    &::before
+      content: attr(data-heading)
+      position: absolute
+      overflow: hidden
+      left: 0
+      top: 0
+      color: #f1ebc9
+      clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%)
